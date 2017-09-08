@@ -12,6 +12,11 @@
 
   <dependencies>
   	<dependency>
+		<groupId>ru.ithex</groupId>
+		<artifactId>model</artifactId>
+		<version>1</version>
+	</dependency>
+	<dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>javax.servlet-api</artifactId>
 		<version>3.1.0</version>
@@ -75,4 +80,11 @@
 			</plugin>
        </plugins>
   </build>
+  
+  <distributionManagement>
+  	<repository>
+  		<id>git-repository-model</id>
+  		<url>https://github.com/wint1992/Model/tree/master/</url>
+  	</repository>
+  </distributionManagement>
 </project>
