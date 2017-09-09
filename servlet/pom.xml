@@ -5,7 +5,7 @@
   <groupId>ru.chuchalin</groupId>
   <artifactId>servlet</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <name>servlet</name>
 
@@ -35,31 +35,31 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>            
-            <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <executions>
-              <execution>
-                  <phase>install</phase>
-                  <goals>
-                      <goal>copy-dependencies</goal>
-                  </goals>
-                  <configuration>
-                      <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                      <overWriteReleases>false</overWriteReleases>
-                      <overWriteSnapshots>false</overWriteSnapshots>
-                      <overWriteIfNewer>true</overWriteIfNewer>
-                  </configuration>
-              </execution>
-          </executions>
-      </plugin>
+          	<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-dependency-plugin</artifactId>
+			    <executions>
+			        <execution>
+			            <phase>install</phase>
+			            <goals>
+			                <goal>copy-dependencies</goal>
+			            </goals>
+			            <configuration>
+			                <outputDirectory>${project.build.directory}/classes/lib</outputDirectory>
+			                <overWriteReleases>false</overWriteReleases>
+			                <overWriteSnapshots>false</overWriteSnapshots>
+			                <overWriteIfNewer>true</overWriteIfNewer>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <configuration>
               <archive>
                 <manifest>
-                  <mainClass>ru.ithex.test.App</mainClass>
+                  <mainClass>ru.chuchalin.servlet.App</mainClass>
                     <addClasspath>true</addClasspath>
                     <classpathPrefix>lib/</classpathPrefix>
                 </manifest>
